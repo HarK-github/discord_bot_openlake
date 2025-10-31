@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- require('dotenv').config();
-=======
-// require('dotenv').config();
->>>>>>> 0b8a326e68f75c645f22b90875ff5a5f0b6b8e0b
+ 
 const { Client, IntentsBitField, EmbedBuilder } = require('discord.js');
 const fetch = require('node-fetch');
 const { MongoClient } = require('mongodb');
