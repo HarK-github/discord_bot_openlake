@@ -328,10 +328,7 @@ const detailedEmbed = new EmbedBuilder()
 }
 
 // ---------------------- BOT START ----------------------
-setInterval(() => {
-    postNewPRsAndIssues().catch(console.error);
-}, FETCH_INTERVAL);
-
+ 
 client.on('ready', async () => {
     console.log(`✅ Logged in as ${client.user.tag}`);
     await initDB();
