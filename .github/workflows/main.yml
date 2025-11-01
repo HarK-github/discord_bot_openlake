@@ -2,13 +2,13 @@ name: Discord Bot Cron
 
 on:
   schedule:
-    - cron: "0 0 */6 * *"   # every 6 days
+    - cron: "0 0 * * 0"   # every Sunday at 00:00 UTC
   workflow_dispatch:
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 30   # run for max 30 minutes
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -33,4 +33,4 @@ jobs:
           PORT: 3000
         run: |
           echo "🚀 Starting Discord bot..."
-          node index.js
+          timeout 30m node index.js
