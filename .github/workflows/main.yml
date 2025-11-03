@@ -2,7 +2,7 @@ name: Discord Bot Cron
 
 on:
   schedule:
-    - cron: "0 0 * * 0"   # every Sunday at 00:00 UTC
+    - cron: "0 0 1,15 * *"   # at 00:00 UTC on the 1st and 15th of each month
   workflow_dispatch:
 
 jobs:
